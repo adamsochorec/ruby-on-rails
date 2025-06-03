@@ -9,7 +9,3 @@
  * Consider organizing styles into separate files for maintainability.
  */
 @import "flowbite/src/themes/default";
-
-@plugin "flowbite/plugin";
-
-@source "../../../node_modules/flowbite";
