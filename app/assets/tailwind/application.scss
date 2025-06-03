@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.bg-cerulean-800 {
+  background-color: #006789;
+}
+.text-cerulean-800 {
+  color: #006789;
+}
+.border-cerulean-800 {
+  border-color: #006789;
+}

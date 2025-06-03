@@ -1,0 +1,69 @@
+<div id="<%= dom_id(public_contract) %>">
+  <h1 class="font-bold text-4xl"><%= public_contract.name %></h1>
+  <div class="mt-6 gap-10">
+    <img
+      class="w-full sm:w-auto rounded-lg"
+      src="<%= public_contract.image_url %>"
+      alt="Obrázek zakázky"
+    />
+    <div>
+      <table
+        class="w-full mt-5 mb-5 text-left text-slate-700 text-sm border border-slate-700 rounded-lg overflow-hidden"
+      >
+        <tbody>
+          <tr class="border-b">
+            <th class="py-2 px-4 font-medium bg-white w-56">Zadavatel</th>
+            <td class="py-2 px-4 text-white bg-cerulean-800">
+              <%= public_contract.client %>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 px-4 font-medium bg-white">Předmět</th>
+            <td class="py-2 px-4 text-white bg-cerulean-800">
+              <%= public_contract.subject %>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 px-4 font-medium bg-white">Termín dokončení</th>
+            <td class="py-2 px-4 text-white bg-cerulean-800">
+              <%= l(public_contract.due_date, format: "%-d. %-m. %Y") %>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 px-4 font-medium bg-white">Max. cena</th>
+            <td class="py-2 px-4 text-white bg-cerulean-800">
+              <%= number_with_delimiter(public_contract.max_price, delimiter: "
+              ") %> Kč
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 px-4 font-medium bg-white">
+              Zakázka malého rozsahu
+            </th>
+            <td class="py-2 px-4 text-white bg-cerulean-800">
+              <%= public_contract.small_scale ? "Ano" : "Ne" %>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 px-4 font-medium bg-gray-50">Stav</th>
+            <td class="py-2 px-4 text-white bg-cerulean-800">
+              <%= public_contract.status %>
+            </td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 px-4 font-medium bg-gray-50">Vytvořeno</th>
+            <td class="py-2 px-4 text-white bg-cerulean-800">
+              <%= l(public_contract.created_at, format: :short) %>
+            </td>
+          </tr>
+          <tr>
+            <th class="py-2 px-4 font-medium bg-gray-50">Naposledy upraveno</th>
+            <td class="py-2 px-4 text-white bg-cerulean-800">
+              <%= l(public_contract.updated_at, format: :short) %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
