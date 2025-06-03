@@ -1,0 +1,12 @@
+div id=dom_id(public_contract) class="w-full sm:w-auto my-5 space-y-5"
+  h2.font-bold.text-xl = public_contract.name
+  p.font-medium Zadavatel: #{public_contract.client}
+  p Předmět: #{public_contract.subject}
+  - if public_contract.image_url.present?
+    img.mt-2.mb-2.max-w-xs src=public_contract.image_url alt="Obrázek zakázky"
+  p Termín dokončení: #{public_contract.due_date}
+  p Max. cena: #{number_to_currency(public_contract.max_price, unit: "Kč", delimiter: " ")}
+  p Zakázka malého rozsahu: #{public_contract.small_scale ? "Ano" : "Ne"}
+  p Stav: #{public_contract.status.humanize}
+  p Vytvořeno: #{l(public_contract.created_at, format: :short)}
+  p Naposledy upraveno: #{l(public_contract.updated_at, format: :short)}
