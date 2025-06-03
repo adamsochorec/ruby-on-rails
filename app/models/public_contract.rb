@@ -1,9 +1,8 @@
 class PublicContract < ApplicationRecord
-  enum status: {
-    nova: 0,
-    zverejnena: 1,
-    v_realizaci: 2,
-    dokoncena: 3,
-    uzavrena: 4
-  }
+  enum :status,
+    created: 0,
+    published: 1,
+    in_progress: 2,
+    done: 3,
+    closed: 4
 end
