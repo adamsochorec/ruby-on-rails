@@ -1,5 +1,32 @@
 {
   "dependencies": {
     "flowbite": "^3.1.2"
-  }
+  },
+  "devDependencies": {
+    "postcss": "^8.5.4",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.8"
+  },
+  "name": "dev-hiring-adam",
+  "version": "1.0.0",
+  "description": "Zadání je na [wiki](https://github.com/NejRemeslnici/dev-hiring-adam/wiki). Hodně štěstí 🤞!",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NejRemeslnici/dev-hiring-adam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NejRemeslnici/dev-hiring-adam/issues"
+  },
+  "homepage": "https://github.com/NejRemeslnici/dev-hiring-adam#readme"
 }
