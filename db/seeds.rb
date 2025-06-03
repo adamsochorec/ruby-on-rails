@@ -9,56 +9,72 @@
 #   end
 
 PublicContract.create!(
-  name: "Stavba mostu",
-  client: "Město Praha",
-  subject: "Výstavba nového mostu přes řeku.",
-  image_url: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-  due_date: Date.today + 90,
-  max_price: 50000000,
-  small_scale: false,
-  status: :created
-)
-
-PublicContract.create!(
-  name: "Rekonstrukce školy",
-  client: "Obec Brno",
-  subject: "Kompletní rekonstrukce základní školy.",
-  image_url: "https://cdn.pixabay.com/photo/2016/11/29/09/08/architecture-1868667_1280.jpg",
-  due_date: Date.today + 180,
-  max_price: 12000000,
-  small_scale: true,
-  status: :published
-)
-
-PublicContract.create!(
-  name: "Oprava silnice",
-  client: "Kraj Vysočina",
-  subject: "Oprava hlavní silnice mezi městy.",
-  image_url: "https://cdn.pixabay.com/photo/2016/11/29/03/53/road-1866843_1280.jpg",
-  due_date: Date.today + 60,
-  max_price: 8000000,
+  name: "Český filharmonický dům",
+  client: "Hlavní město Praha",
+  subject: "Výstavba nového koncertního sálu pro Českou filharmonii v centru Prahy.",
+  image_url: "https://cc.cz/wp-content/uploads/fly-images/221905/filharmonieboxed-1180x675-c.jpg",
+  due_date: Date.today + 365,
+  max_price: 200000000,
   small_scale: false,
   status: :in_progress
 )
-
 PublicContract.create!(
-  name: "Výsadba stromů",
-  client: "Město Ostrava",
-  subject: "Výsadba 500 nových stromů v městských parcích.",
-  image_url: "https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg",
-  due_date: Date.today + 30,
-  max_price: 400000,
+  name: "Amager Bakke Waste-to-Energy Plant",
+  client: "City of Copenhagen",
+  subject: "Construction of a waste-to-energy plant with a ski slope on the roof.",
+  image_url: "https://www.archpaper.com/wp-content/uploads/2020/11/BIG_Copenhill_©HuftonCrow_008.jpg",
+  due_date: Date.today + 365,
+  max_price: 150000000,
+  small_scale: false,
+  status: :published
+)
+PublicContract.create!(
+  name: "Tripiz Museum",
+  client: "Tripiz Foundation",
+  subject: "Design and construction of a contemporary art museum with innovative spatial concepts.",
+  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkVuV8JnwnJwhW0Hf-Vk7vEP7M0RJEqgQL7g&s", 
+  due_date: Date.today + 120,
+  max_price: 45000000,
+  small_scale: true,
+  status: :published
+)
+PublicContract.create!(
+  name: "8 House Residential Complex",
+  client: "Ørestad Development Corporation",
+  subject: "Development of a mixed-use residential complex shaped like a figure 8.",
+  image_url: "https://static.dezeen.com/uploads/2016/02/8-house-big-copenhagen_dezeen_sqa-1.jpg",
+  due_date: Date.today + 240,
+  max_price: 90000000,
+  small_scale: false,
+  status: :in_progress
+)
+PublicContract.create!(
+  name: "VIA 57 West Pyramid",
+  client: "Durst Organization",
+  subject: "Construction of a tetrahedron-shaped residential building in Manhattan.",
+  image_url: "https://big.dk/wp-content/uploads/2022/06/21_10009_N3105_hero1.jpg",
+  due_date: Date.today + 180,
+  max_price: 120000000,
+  small_scale: false,
+  status: :created
+)
+PublicContract.create!(
+  name: "LEGO House",
+  client: "LEGO Group",
+  subject: "Design and construction of an experience center inspired by LEGO bricks.",
+  image_url: "https://big.dk/wp-content/uploads/2022/06/19_12033_N121_webproject-e1669041489225.jpg",
+  due_date: Date.today + 90,
+  max_price: 35000000,
   small_scale: true,
   status: :done
 )
-
 PublicContract.create!(
-  name: "Modernizace knihovny",
-  client: "Město Plzeň",
-  subject: "Modernizace městské knihovny a rozšíření služeb.",
-  image_url: "https://cdn.pixabay.com/photo/2016/11/29/09/16/library-1866844_1280.jpg",
-  due_date: Date.today + 120,
-  max_price: 2500000,
-  small_scale: false,
+  name: "The Twist Museum",
+  client: "Kistefos Museum",
+  subject: "Construction of a twisted bridge-museum over the Randselva river.",
+  image_url: "https://images.adsttc.com/media/images/5d82/2b66/284d/d153/e100/003f/large_jpg/02_BIG_KIS_The-Twist_Image-by-Laurian-Ghinitoiu.jpg?1568811835",
+  due_date: Date.today + 60,
+  max_price: 20000000,
+  small_scale: true,
   status: :closed
 )
