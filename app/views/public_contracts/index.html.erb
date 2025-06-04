@@ -46,9 +46,7 @@
   <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/>
   <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
 </svg>
-
-
-         <% end %>
+     <% end %>
 
         <%= link_to edit_public_contract_path(public_contract), class: "rounded-md px-3.5 py-2.5 text-white bg-slate-700 hover:bg-slate-500" do %> 
 
@@ -56,8 +54,7 @@
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
 </svg>
          <% end %>
-        
-        <%= button_to public_contract, method:
+<%= button_to public_contract, method:
         :delete, class: "rounded-md px-3.5 py-2.5 text-white
         bg-red-600 hover:bg-red-500 cursor-pointer", data: { turbo_confirm: "Are you sure?" } do %>
         <svg

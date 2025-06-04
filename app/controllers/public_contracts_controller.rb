@@ -21,6 +21,7 @@ class PublicContractsController < ApplicationController
 
   # POST /public_contracts or /public_contracts.json
   def create
+    p params
     @public_contract = PublicContract.new(public_contract_params)
 
     respond_to do |format|
