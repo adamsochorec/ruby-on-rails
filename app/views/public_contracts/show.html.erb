@@ -1,6 +1,6 @@
 <% content_for :title, "Showing public contract" %>
 
-<div class="md:w-2/3 w-full">
+<div class="w-full">
   <% if notice.present? %>
   <p
     class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block"
@@ -10,26 +10,17 @@
   </p>
   <% end %> 
   <%= render @public_contract %> 
-<div class="flex justify-between">   <%= link_to public_contracts_path, class: "min-w-50 w-full
-  sm:w-auto text-center rounded-md px-3.5 py-2.5 text-white bg-slate-700
-  hover:bg-slate-500 flex items-center justify-center gap-2" do %> 
-   <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
-</svg>
-
-Back <% end %>
+<div class="flex w-full gap-4">  
   
-  <%= link_to edit_public_contract_path(@public_contract), class: "min-w-50 w-full sm:w-auto
-        text-center rounded-md px-3.5 py-2.5 text-white bg-amber-500 hover:bg-amber-600 cursor-pointer flex items-center justify-center gap-2" do %> 
-    <svg class="w-6 h-6 text-white aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <%= link_to edit_public_contract_path(@public_contract), class: "w-50 w-full sm:w-auto rounded-md px-3.5 py-2.5 text-slate-700 bg-amber-500 hover:bg-amber-600 cursor-pointer flex items-center justify-center gap-2" do %> 
+    <svg class="w-6 h-6 text-slate-700 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
-</svg>
-Edit <% end %>
+</svg>Edit
+<% end %>
   
  
-  <%= button_to @public_contract, method: :delete, class: "min-w-50 w-full rounded-md px-3.5 py-2.5 text-white
-        bg-red-600 hover:bg-red-500 font-medium cursor-pointer flex items-center
-        justify-center gap-2",
+  <%= button_to @public_contract, method: :delete, class: "w-50 w-full sm:w-auto rounded-md px-3.5 py-2.5 text-white
+        bg-red-600 hover:bg-red-500 font-medium cursor-pointer flex items-center justify-center gap-2",
   data: { turbo_confirm: "Are you sure?" } do %>
      <svg
           class="w-6 h-6 text-white"
@@ -48,6 +39,6 @@ Edit <% end %>
             d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"
           />
         </svg>
-                Delete <% end %>
+             Delete   <% end %>
 </div>
 </div>

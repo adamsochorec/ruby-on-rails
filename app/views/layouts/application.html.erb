@@ -29,7 +29,9 @@
   </head>
 
   <body style="background-color: rgb(230, 240, 243)">
-    <main class="container mx-auto mt-20 px-5 w-[1200px]"><%= yield %></main>
+    <main class="container mx-auto mt-20 px-5 lg:w-[1200px] md:w-full">
+      <%= yield %>
+    </main>
     <%= render "layouts/footer" %>
   </body>
 </html>
