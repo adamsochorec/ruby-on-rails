@@ -11,17 +11,17 @@
   <% end %> 
   <%= render @public_contract %> 
 <div class="flex justify-between">   <%= link_to public_contracts_path, class: "min-w-50 w-full
-  sm:w-auto text-center rounded-md px-3.5 py-2.5 text-slate-700 bg-amber-500
-  hover:bg-amber-600 flex items-center justify-center gap-2" do %> 
-   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  sm:w-auto text-center rounded-md px-3.5 py-2.5 text-white bg-slate-700
+  hover:bg-slate-500 flex items-center justify-center gap-2" do %> 
+   <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
 </svg>
 
 Back <% end %>
   
   <%= link_to edit_public_contract_path(@public_contract), class: "min-w-50 w-full sm:w-auto
-        text-center rounded-md px-3.5 py-2.5 text-slate-700 bg-gray-200 hover:bg-gray-300 cursor-pointer flex items-center justify-center gap-2" do %> 
-    <svg class="w-6 h-6 text-slate-700 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        text-center rounded-md px-3.5 py-2.5 text-white bg-amber-500 hover:bg-amber-600 cursor-pointer flex items-center justify-center gap-2" do %> 
+    <svg class="w-6 h-6 text-white aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
 </svg>
 Edit <% end %>

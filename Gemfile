@@ -67,3 +67,5 @@ gem "tailwindcss-ruby", "~> 4.1"
 gem "tailwindcss-rails", "~> 4.2"
 
 gem 'slim', '~> 5.2', '>= 5.2.1'
+
+gem 'erb_lint', require: false
