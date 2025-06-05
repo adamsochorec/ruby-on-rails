@@ -1,4 +1,4 @@
-# Public Contracts Miniapp
+# Ruby on Rails Miniapp
 
 ## Who?
 
