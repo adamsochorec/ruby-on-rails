@@ -1,3 +1,5 @@
+# filepath: bin/render-build.sh
+
 set -o errexit
 
 bundle install
@@ -5,3 +7,4 @@ bin/rails assets:precompile
 bin/rails assets:clean
 
 bin/rails db:migrate
+bin/rails db:seed RAILS_ENV=production
