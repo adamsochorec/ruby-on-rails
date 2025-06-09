@@ -1,0 +1,7 @@
+- content_for :title, "New public contract"
+
+.md:w-2/3.w-full
+  h1.font-bold.text-4xl.border-b.border-slate-700.pb-2.mb-5
+    | New public contract
+
+  = render "form", public_contract: @public_contract

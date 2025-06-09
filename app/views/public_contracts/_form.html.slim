@@ -1,0 +1,45 @@
+= form_with(model: public_contract, local: true) do |form|
+  - if public_contract.errors.any?
+    .mb-4.text-red-600
+      h2
+        = pluralize(public_contract.errors.count, "error")
+        |  prohibited this contract from being saved:
+      ul
+        - public_contract.errors.full_messages.each do |msg|
+          li = msg
+
+  .sm:flex.gap-4
+    .sm:w-1/2.mb-4
+      = form.label :name, class: "block font-medium"
+      = form.text_field :name, class: "w-full border rounded px-3 py-2"
+    .sm:w-1/2.mb-4
+      = form.label :client, class: "block font-medium"
+      = form.text_field :client, class: "w-full border rounded px-3 py-2"
+
+  .mb-4
+    = form.label :subject, class: "block font-medium"
+    = form.text_field :subject, class: "w-full border rounded px-3 py-2"
+
+  .mb-4
+    = form.label :image_url, class: "block font-medium"
+    = form.text_field :image_url, class: "w-full border rounded px-3 py-2"
+
+  .sm:flex.gap-4
+    .sm:w-1/2.mb-4
+      = form.label :due_date, class: "block font-medium"
+      = form.date_field :due_date, class: "w-full border rounded px-3 py-2"
+    .sm:w-1/2.mb-4
+      = form.label :max_price, class: "block font-medium"
+      = form.number_field :max_price, class: "w-full border rounded px-3 py-2", step: 1
+
+  .sm:flex.gap-4
+    .flex.items-center.gap-4.sm:w-1/2.mb-4
+      = form.check_box :small_scale, class: "w-4 h-4"
+      = form.label :small_scale, "Small scale", class: "block font-medium"
+    .sm:w-1/2.mb-4
+      = form.label :status, class: "block font-medium"
+      = form.select :status, PublicContract.statuses.keys.map { |k| [k.humanize, k] }, {}, class: "w-full border rounded px-3 py-2"
+
+  .flex.gap-4
+    = form.submit class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 text-slate-700 bg-amber-500 hover:bg-amber-600 font-medium cursor-pointer flex items-center justify-center"
+    = link_to "Cancel", public_contracts_path, class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 text-white bg-slate-700 hover:bg-slate-500 font-medium cursor-pointer flex items-center justify-center gap-2"

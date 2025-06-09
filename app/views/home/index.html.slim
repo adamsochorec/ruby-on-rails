@@ -1,0 +1,43 @@
+section.max-w-2xl.mx-auto.mt-16.p-6.bg-white.rounded-lg.shadow-md
+  h1.text-3xl.font-bold.mb-4.text-amber-500 Miniaplikace pro správu veřejných zakázek
+  p.mb-6.text-gray-700
+    strong Cílem je vytvořit jednoduchou miniaplikaci pro zadávání, přehled a správu "veřejných zakázek".
+
+  h2.text-xl.font-semibold.mt-6.mb-2.text-amber-500 Obecná pravidla
+  ul.list-disc.list-inside.mb-4.text-gray-700.space-y-1
+    li Používej jakékoliv informační zdroje (internet, AI, Railsový generátor kódu, cokoliv).
+    li Cílem není tiše několik dní pracovat a pak odevzdat "hotový úžasný výsledek", ale spíš průběžně se o vznikajícím projektu bavit.
+    li Kód i poznámky piš anglicky, commit zprávy taky.
+    li Průběžně commituj do gitu a pushuj do GitHub repozitáře.
+    li Zaměř se hlavně na front-end, s back-endem ti pomůžeme.
+    li Aplikace by měla být plně responzivní, sémanticky správná a co nejvíc přístupná.
+    li Pro CSS stylování používej Tailwind.
+    li Kdykoliv se na cokoliv zeptej, rádi poradíme.
+
+  h2.text-xl.font-semibold.mt-6.mb-2.text-amber-500 Zadání pro aplikaci
+  p.mb-2.text-gray-700
+    | Aplikace by měla poskytnout webové rozhraní pro správu "veřejných zakázek" (Public Contracts) bez správy uživatelů a autentizace.
+  ul.list-disc.list-inside.mb-4.text-gray-700.space-y-1
+    li Přehled všech zakázek
+    li Detail jedné zakázky
+    li Formulář pro přidání nové zakázky
+    li Formulář pro editaci existující zakázky
+    li Možnost smazat danou zakázku
+
+  h3.font-semibold.mt-4.mb-1.text-amber-500 Model Public Contract obsahuje:
+  ul.list-disc.list-inside.mb-4.text-gray-700.space-y-1
+    li ID zakázky (číslo, primární index)
+    li Název zakázky (text)
+    li Zadavatel (text)
+    li Předmět zakázky (textarea)
+    li Obrázek (textový odkaz na obrázek z webu)
+    li Datum realizace (datum)
+    li Maximální cena (číslo)
+    li Příznak malého rozsahu (boolean)
+    li Stav zakázky (výčet stavů: "Nová", "Zveřejněná", "V realizaci", "Dokončená", "Uzavřená")
+    li Timestampy (vytvoření, poslední úprava)
+
+  = link_to public_contracts_path, class: "text-center w-full rounded-md px-3.5 py-2.5 mb-6 text-slate-700 bg-amber-500 hover:bg-amber-600 flex items-center justify-center gap-2" do
+    svg.text-slate-700.w-6.h-6.text-gray-800.dark\:text-white aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+      path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H4m12 0-4 4m4-4-4-4m3-4h2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-2"
+    | Aplikace
