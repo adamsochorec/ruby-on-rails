@@ -53,7 +53,7 @@ class PublicContractsController < ApplicationController
     @public_contract.destroy!
 
     respond_to do |format|
-      format.html { redirect_to public_contracts_path, status: :see_other, notice: "Public contract was successfully destroyed." }
+      format.html { redirect_to public_contracts_path, status: :see_other, notice: "Public contract was successfully deleted." }
       format.json { head :no_content }
     end
   end

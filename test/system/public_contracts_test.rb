@@ -21,12 +21,12 @@ class PublicContractsTest < ApplicationSystemTestCase
     fill_in "Due date", with: Date.today
     fill_in "Max price", with: 1000
     select "Created", from: "Status"
-    choose "Small scale", option: "false"
+    check "Small scale"
 
     click_on "Create Public contract"
 
     assert_text "Public contract was successfully created"
-    click_on "Cancel"
+    click_on "Back"
   end
 
   test "should update Public contract" do
@@ -39,12 +39,12 @@ class PublicContractsTest < ApplicationSystemTestCase
     click_on "Update Public contract"
 
     assert_text "Public contract was successfully updated"
-    click_on "Cancel"
+    click_on "Back"
   end
 
   test "should destroy Public contract" do
     visit public_contract_url(@public_contract)
-    accept_confirm { click_on "Delete", match: :first }
+    click_on "Delete"
 
     assert_text "Public contract was successfully deleted"
   end
