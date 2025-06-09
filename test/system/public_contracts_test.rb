@@ -12,27 +12,27 @@ class PublicContractsTest < ApplicationSystemTestCase
 
   test "should create public contract" do
     visit public_contracts_url
-    click_on "New public contract"
+    click_on "Add new"
 
     click_on "Create Public contract"
 
     assert_text "Public contract was successfully created"
-    click_on "Back"
+    click_on "Cancel"
   end
 
   test "should update Public contract" do
     visit public_contract_url(@public_contract)
-    click_on "Edit this public contract", match: :first
+    click_on "Edit", match: :first
 
     click_on "Update Public contract"
 
     assert_text "Public contract was successfully updated"
-    click_on "Back"
+    click_on "Cancel"
   end
 
   test "should destroy Public contract" do
     visit public_contract_url(@public_contract)
-    accept_confirm { click_on "Destroy this public contract", match: :first }
+    accept_confirm { click_on "Delete", match: :first }
 
     assert_text "Public contract was successfully destroyed"
   end
