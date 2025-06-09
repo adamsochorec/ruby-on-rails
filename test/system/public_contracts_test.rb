@@ -14,6 +14,15 @@ class PublicContractsTest < ApplicationSystemTestCase
     visit public_contracts_url
     click_on "Add new"
 
+    fill_in "Name", with: "Test Contract"
+    fill_in "Client", with: "Test Client"
+    fill_in "Subject", with: "Test Subject"
+    fill_in "Image url", with: "http://example.com/image.png"
+    fill_in "Due date", with: Date.today
+    fill_in "Max price", with: 1000
+    select "Created", from: "Status"
+    choose "Small scale", option: "false"
+
     click_on "Create Public contract"
 
     assert_text "Public contract was successfully created"
@@ -23,6 +32,9 @@ class PublicContractsTest < ApplicationSystemTestCase
   test "should update Public contract" do
     visit public_contract_url(@public_contract)
     click_on "Edit", match: :first
+
+    fill_in "Name", with: "Updated Name"
+    # Fill in other fields as needed
 
     click_on "Update Public contract"
 
