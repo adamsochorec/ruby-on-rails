@@ -5,6 +5,19 @@ class PublicContractsControllerTest < ActionDispatch::IntegrationTest
     @public_contract = public_contracts(:one)
   end
 
+  def valid_attributes
+    {
+      name: "Test Contract",
+      client: "Test Client",
+      subject: "Test Subject",
+      image_url: "http://example.com/image.png",
+      due_date: Date.today,
+      max_price: 1000,
+      small_scale: false,
+      status: "created"
+    }
+  end
+
   test "should get index" do
     get public_contracts_url
     assert_response :success
@@ -17,7 +30,7 @@ class PublicContractsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create public_contract" do
     assert_difference("PublicContract.count") do
-      post public_contracts_url, params: { public_contract: {} }
+      post public_contracts_url, params: { public_contract: valid_attributes }
     end
 
     assert_redirected_to public_contract_url(PublicContract.last)
@@ -34,8 +47,10 @@ class PublicContractsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update public_contract" do
-    patch public_contract_url(@public_contract), params: { public_contract: {} }
+    patch public_contract_url(@public_contract), params: { public_contract: valid_attributes.merge(name: "Updated Name") }
     assert_redirected_to public_contract_url(@public_contract)
+    @public_contract.reload
+    assert_equal "Updated Name", @public_contract.name
   end
 
   test "should destroy public_contract" do

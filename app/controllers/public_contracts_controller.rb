@@ -61,11 +61,13 @@ class PublicContractsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_public_contract
-      @public_contract = PublicContract.find(params.expect(:id))
+      @public_contract = PublicContract.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def public_contract_params
-      params.expect(public_contract: [ "name", "client", "subject", "image_url", "due_date", "max_price", "small_scale", "status" ])
+      params.require(:public_contract).permit(
+        :name, :client, :subject, :image_url, :due_date, :max_price, :small_scale, :status
+      )
     end
 end
