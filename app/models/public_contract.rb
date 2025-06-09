@@ -6,5 +6,6 @@ class PublicContract < ApplicationRecord
     done: 3,
     closed: 4
 
-  validates :name, :client, :subject, :image_url, :due_date, :max_price, :small_scale, :status, presence: true
+  validates :name, :client, :subject, :image_url, :due_date, :max_price, :status, presence: true
+  validates :small_scale, inclusion: { in: [true, false] }
 end
