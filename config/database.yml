@@ -27,6 +27,10 @@ test:
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
   <<: *default
-  database: ruby_on_rails_production
-  username: postgres
+  database: ruby-on-rails
+  username: adamsochorec
   password: <%= ENV['DATABASE_URL'] %>
+
+cable:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
