@@ -66,6 +66,6 @@ class PublicContractsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def public_contract_params
-      params.expect(public_contract: ["name", "client", "subject", "image_url", "due_date", "max_price", "small_scale", "status"])
+      params.expect(public_contract: [ "name", "client", "subject", "image_url", "due_date", "max_price", "small_scale", "status" ])
     end
 end

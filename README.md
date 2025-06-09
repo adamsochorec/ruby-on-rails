@@ -1,5 +1,7 @@
 # Ruby on Rails Miniapp
 
+[![CI](https://github.com/adamsochorec/ruby-on-rails/actions/workflows/ci.yml/badge.svg)](https://github.com/adamsochorec/ruby-on-rails/actions/workflows/ci.yml)
+
 ## Who?
 
 Developed by [Adam Sochorec](https://www.linkedin.com/in/adamsochorec) as a coding challenge and learning project, with guidance and feedback from the [NejŘemeslníci.cz](https://www.nejremeslnici.cz) team.
@@ -31,6 +33,8 @@ Built with:
 bundle install
 rails db:setup
 rails server
+bin/dev # Local server
+db:seed # Data seeding
 ```
 
 ---

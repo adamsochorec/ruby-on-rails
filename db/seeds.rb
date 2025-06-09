@@ -32,7 +32,7 @@ PublicContract.create!(
   name: "Tripiz Museum",
   client: "Tripiz Foundation",
   subject: "Design and construction of a contemporary art museum with innovative spatial concepts.",
-  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkVuV8JnwnJwhW0Hf-Vk7vEP7M0RJEqgQL7g&s", 
+  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkVuV8JnwnJwhW0Hf-Vk7vEP7M0RJEqgQL7g&s",
   due_date: Date.today + 120,
   max_price: 45000000,
   small_scale: true,
