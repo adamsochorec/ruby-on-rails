@@ -48,7 +48,7 @@
 
     <div class="flex items-center gap-4 sm:w-1/2 mb-4">
     <%= form.check_box :small_scale, class: "w-4 h-4" %>
-    <%= form.label :small_scale, class: "block font-medium" %>
+    <%= form.label :small_scale, "Small scale", class: "block font-medium" %>
 
   </div>
 
@@ -61,25 +61,6 @@
     <%= form.submit class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 text-slate-700 bg-amber-500 hover:bg-amber-600 font-medium cursor-pointer flex items-center justify-center" %>
 
 
- <%= link_to public_contracts_path, class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 text-white bg-slate-700 hover:bg-slate-500 font-medium cursor-pointer flex items-center justify-center gap-2" do %>
-    <svg
-      class="w-6 h-6 text-white"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      fill="none"
-      viewBox="0 0 24 24"
-    >
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-width="2"
-        d="m6 6 12 12m3-6a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-      />
-    </svg>
-    Cancel
-  <% end %>
-    
+ <%= link_to "Cancel", public_contracts_path, class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 text-white bg-slate-700 hover:bg-slate-500 font-medium cursor-pointer flex items-center justify-center gap-2" %>
   </div>
 <% end %>

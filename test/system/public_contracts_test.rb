@@ -46,6 +46,6 @@ class PublicContractsTest < ApplicationSystemTestCase
     visit public_contract_url(@public_contract)
     accept_confirm { click_on "Delete", match: :first }
 
-    assert_text "Public contract was successfully destroyed"
+    assert_text "Public contract was successfully deleted"
   end
 end
